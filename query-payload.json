@@ -1,0 +1,3 @@
+{
+  "query": "{\n  search(query: \"type:pr state:open team-review-requested:reload/developers\", type: ISSUE, first: 100) {\n    issueCount\n    pageInfo {\n      endCursor\n      startCursor\n    }\n    edges {\n      node {\n        ... on PullRequest {\n          repository {\n            nameWithOwner\n          }\n          number\n          title\n          url\n        \n        }\n      }\n    }\n  }\n}"
+}
